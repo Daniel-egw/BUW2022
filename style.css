@@ -1,9 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+*
+{
+    font-family: inherit;
+}
 
 body, html
 {
     background-color: #E5E5E5;
-    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 25px;
     padding: 0;
     margin: 0;
@@ -12,13 +17,21 @@ body, html
 
 :root
 {
-    --colorAccent: #39ff49;
+    --colorAccent: #6adb00;
 }
 
 ::selection
 {
     color: white;
     background-color: var(--colorAccent);
+}
+
+header
+{
+    position: fixed;
+    width: 100%;
+    background-color: #222;
+    box-shadow: 0 0 10px 5px #666;
 }
 
 .skipNav
@@ -39,26 +52,24 @@ body, html
 }   
 .skipNav:focus
 {
-    transform: translateX(100%);
+    transform: translateX(10%);
     transition: transform 200ms;
 }
 
 nav
 {
     display: flex;
-    position: fixed;
     justify-content: center;
     gap: 5%;
-    width: 100%;
-    background-color: #222;
-    box-shadow: 0 0 10px 5px #666;
+    flex-wrap: wrap;
 }
 
 a
 {
     text-decoration: none;
     color: var(--colorAccent);
-    padding: 10px;
+    padding: 16px;
+    transition: background-color 100ms ease-in-out;
 }
 a:hover
 {
@@ -97,7 +108,7 @@ section
 }
 
 p
-
 {
     font-family: 'calibri';
 }
+
