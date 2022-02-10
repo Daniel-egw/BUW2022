@@ -30,8 +30,9 @@ header
 {
     position: fixed;
     width: 100%;
-    background-color: #222;
-    box-shadow: 0 0 10px 5px #666;
+    background-color: #FFFFFFEE;
+    box-shadow: 0 0 10px 5px #CCC;
+    backdrop-filter: blur(3px);
 }
 
 .skipNav
@@ -70,6 +71,7 @@ a
     color: var(--colorAccent);
     padding: 16px;
     transition: background-color 100ms ease-in-out;
+    border-radius: 10px;
 }
 a:hover
 {
@@ -104,7 +106,7 @@ section
     color: black;
     background-color: white;
     border-radius: 10px;
-    box-shadow: 0 0 10px 2px var(--colorAccent);
+    box-shadow: 0 0 10px 1px var(--colorAccent);
 }
 
 p
@@ -112,3 +114,56 @@ p
     font-family: 'calibri';
 }
 
+@media(prefers-color-scheme: dark)
+{
+    p, h2
+    {
+        color: white;
+    }
+
+    body
+    {
+        background-color: #181818;
+    }
+
+    section
+    {
+        background-color: #222;
+    }
+
+    header
+    {
+        box-shadow: 0 0 10px 5px #121212;
+        background-color: #222222EE;
+    }
+}
+
+@media(max-width: 500px)
+{
+    p, header
+    {
+        font-size: 20px;
+    }
+
+    h1
+    {
+        font-size: 35px;
+        margin-top: 90px;
+    }
+
+    h2
+    {
+        font-size: 30px;
+    }
+
+    section
+    {
+        margin: 20px;
+    }
+
+    nav
+    {
+        gap: 0;
+        justify-content: space-evenly;
+    }
+}
