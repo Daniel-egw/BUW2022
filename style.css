@@ -3,7 +3,6 @@
 :root
 {
     --colorAccent: #6adb00;
-    --background: #E5E5E5;
 }
 
 *
@@ -13,15 +12,12 @@
 
 body, html
 {
-    background-color: var(--background);
+    background-color: #EEE;
     font-family: "Roboto", sans-serif;
     font-size: 23px;
-    padding: 0;
     margin: 0;
     scroll-behavior: smooth;
 }
-
-
 
 ::selection
 {
@@ -33,8 +29,10 @@ header
 {
     position: fixed;
     width: 100%;
-    box-shadow: 0 0 10px 5px #CCC;
+    box-shadow: 0 0 15px 3px #111111AA;
     backdrop-filter: blur(3px);
+    background-color: #181818F3;
+    border-radius: 0 0 5px 5px;
 }
 
 .skipNav
@@ -72,7 +70,7 @@ a
     color: var(--colorAccent);
     padding: 16px;
     transition: background-color 100ms ease-in-out;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 a:hover
 {
@@ -90,6 +88,8 @@ main
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 h1
@@ -101,23 +101,67 @@ h1
 
 h2
 {
-    margin: 0;
+    margin-top: 0;
+    margin-bottom: 16px;
+    color: #222;
 }
 
 section
 {
-    max-width: 70ch;
     margin: 32px;
     padding: 16px;
-    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+article
+{
+    padding: 32px;
+    width: 100%;
+    gap: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.articleBlack
+{
+    background-color: #222;
+    color: white;
+}
+
+.articleWhite
+{
     background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px 1px var(--colorAccent);
+    color: #222;
 }
 
 p
 {
     font-family: 'calibri';
+    max-width: 60ch;
+    font-size: 22px;
+}
+
+img
+{
+    aspect-ratio: 1/1;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 0 15px 2px #11111199;
+    transition: transform 200ms ease-in-out;
+    cursor: pointer;
+}
+img:hover
+{
+    transform: scale(150%);
+    transition-delay: 500ms;
 }
 
 .link
@@ -139,32 +183,6 @@ p
     background-size: cover;
     max-width: 50px;
     height: 100%;
-}
-
-@media(prefers-color-scheme: dark)
-{
-    :root
-    {
-        --background: #181818;
-    }
-    
-    p, h2
-    {
-        color: white;
-    }
-
-    section
-    {
-        background-color: #222;
-    }
-
-    header
-    {
-        box-shadow: 0 0 10px 5px #121212;
-        background-color: #222222EE;
-    }
-
-    
 }
 
 @media(max-width: 500px)
@@ -194,5 +212,23 @@ p
     {
         gap: 0;
         justify-content: space-evenly;
+    }
+}
+
+@media(max-width: 1025px)
+{
+    article
+    {
+        flex-direction: column;
+    }
+
+    p
+    {
+        margin: 16px;
+    }
+
+    img
+    {
+        order: -1;
     }
 }
