@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+:root
+{
+    --colorAccent: #6adb00;
+    --background: #E5E5E5;
+}
+
 *
 {
     font-family: inherit;
@@ -7,18 +13,15 @@
 
 body, html
 {
-    background-color: #E5E5E5;
+    background-color: var(--background);
     font-family: "Roboto", sans-serif;
-    font-size: 25px;
+    font-size: 23px;
     padding: 0;
     margin: 0;
     scroll-behavior: smooth;
 }
 
-:root
-{
-    --colorAccent: #6adb00;
-}
+
 
 ::selection
 {
@@ -30,7 +33,6 @@ header
 {
     position: fixed;
     width: 100%;
-    background-color: #FFFFFFEE;
     box-shadow: 0 0 10px 5px #CCC;
     backdrop-filter: blur(3px);
 }
@@ -54,7 +56,6 @@ header
 .skipNav:focus
 {
     transform: translateX(10%);
-    transition: transform 200ms;
 }
 
 nav
@@ -76,6 +77,11 @@ a
 a:hover
 {
     background-color: #181818;
+}
+
+:focus
+{ 
+    outline: 1px solid var(--colorAccent);
 }
 
 main
@@ -114,16 +120,37 @@ p
     font-family: 'calibri';
 }
 
+.link
+{
+    background: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+.link:hover
+{
+    background: none;
+}
+.link::after
+{
+    content: "";
+    background-image: url("img/link.png");
+    position: absolute;
+    background-size: cover;
+    max-width: 50px;
+    height: 100%;
+}
+
 @media(prefers-color-scheme: dark)
 {
+    :root
+    {
+        --background: #181818;
+    }
+    
     p, h2
     {
         color: white;
-    }
-
-    body
-    {
-        background-color: #181818;
     }
 
     section
@@ -136,6 +163,8 @@ p
         box-shadow: 0 0 10px 5px #121212;
         background-color: #222222EE;
     }
+
+    
 }
 
 @media(max-width: 500px)
