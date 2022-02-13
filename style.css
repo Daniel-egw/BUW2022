@@ -29,7 +29,7 @@ header
 {
     position: fixed;
     width: 100%;
-    box-shadow: 0 0 15px 3px #111111AA;
+    box-shadow: 0 0 15px 3px #11111199;
     backdrop-filter: blur(3px);
     background-color: #181818F3;
     border-radius: 0 0 5px 5px;
@@ -126,6 +126,16 @@ article
     justify-content: center;
     align-items: center;
     display: flex;
+}
+
+article:first-of-type
+{
+    border-top: 5px solid var(--colorAccent);
+}
+
+article:last-of-type
+{
+    border-bottom: 5px solid var(--colorAccent);
 }
 
 .articleBlack
