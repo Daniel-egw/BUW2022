@@ -8,6 +8,7 @@
 *
 {
     font-family: inherit;
+    color: inherit;
 }
 
 body, html
@@ -126,6 +127,7 @@ article
     justify-content: center;
     align-items: center;
     display: flex;
+    background-color: white;
 }
 
 article:first-of-type
@@ -144,10 +146,31 @@ article:last-of-type
     color: white;
 }
 
-.articleWhite
+.newspaper
 {
-    background-color: white;
-    color: #222;
+    flex-direction: column;
+    transition: height 200ms ease-in-out;
+}
+
+.newspaper p
+{
+    max-width: 80ch;
+    margin: 0; 
+}
+
+.readMore
+{
+    background-color: transparent;
+    border: none;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: .8em;
+    transition: color 100ms;
+    outline: none;
+}
+.readMore:hover
+{
+    color: var(--colorAccent);
 }
 
 p
