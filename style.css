@@ -36,6 +36,12 @@ header
     border-radius: 0 0 5px 5px;
 }
 
+a
+{
+    color: var(--colorAccent);
+    text-decoration: none;
+}
+
 .skipNav
 {
     position: fixed;
@@ -43,6 +49,9 @@ header
     transition: transform 200ms;
     text-decoration: overline;
     z-index: 100;
+    margin-top: 5px;
+    padding: 8px;
+    border-radius: 5px;
 }
 .skipNav::after
 {
@@ -65,15 +74,13 @@ nav
     flex-wrap: wrap;
 }
 
-a
+header a
 {
-    text-decoration: none;
-    color: var(--colorAccent);
     padding: 16px;
     transition: background-color 100ms ease-in-out;
     border-radius: 5px;
 }
-a:hover
+header a:hover
 {
     background-color: #181818;
 }
