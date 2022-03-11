@@ -165,11 +165,6 @@ article:last-of-type
     margin: 0; 
 }
 
-#execution p
-{
-    max-width: 80ch;
-}
-
 .readMore
 {
     background-color: transparent;
