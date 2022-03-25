@@ -211,10 +211,11 @@ footer
     margin-top: 64px;
     background-color: #222;
     color: white;
-    display: grid;
+    display: flex;
     align-items: center;
-    justify-items: center;
+    justify-content: space-evenly;
     grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
 }
 
 
@@ -270,4 +271,10 @@ footer div
         gap: 0;
         justify-content: space-evenly;
     }
+
+    footer
+    {
+        flex-direction: column;
+    }
+}
 }
