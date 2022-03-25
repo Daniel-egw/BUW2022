@@ -162,7 +162,6 @@ article:last-of-type
 #responses article p
 {
     max-width: 80ch;
-    margin: 0; 
 }
 
 .readMore
@@ -204,27 +203,6 @@ img:hover
     transition-delay: 500ms;
 }
 
-.link
-{
-    background: none;
-    margin: 0;
-    padding: 0;
-    position: relative;
-}
-.link:hover
-{
-    background: none;
-}
-.link::after
-{
-    content: "";
-    background-image: url("img/link.png");
-    position: absolute;
-    background-size: cover;
-    max-width: 50px;
-    height: 100%;
-}
-
 footer
 {
     border-top: 5px solid var(--colorAccent);
@@ -232,6 +210,31 @@ footer
     height: 200px;
     margin-top: 64px;
     background-color: #222;
+    color: white;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+
+@media(max-width: 1025px)
+{
+    article
+    {
+        flex-direction: column;
+    }
+
+    p
+    {
+        margin: 16px;
+    }
+
+    img
+    {
+        order: -1;
+    }
 }
 
 @media(max-width: 500px)
@@ -261,23 +264,5 @@ footer
     {
         gap: 0;
         justify-content: space-evenly;
-    }
-}
-
-@media(max-width: 1025px)
-{
-    article
-    {
-        flex-direction: column;
-    }
-
-    p
-    {
-        margin: 16px;
-    }
-
-    img
-    {
-        order: -1;
     }
 }
