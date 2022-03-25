@@ -210,7 +210,6 @@ footer
     height: 200px;
     margin-top: 64px;
     background-color: #222;
-<<<<<<< HEAD
     color: white;
     display: grid;
     align-items: center;
@@ -236,17 +235,11 @@ footer
     {
         order: -1;
     }
-=======
-    display: flex;
-    align-items: center;
-    justify-content: space-bewteen;
-}
 
 footer div
 {
     display: flex;
     flex-direction: column;
->>>>>>> f3d66d6dee27a77e87aa4523ed346cdd0c4462b7
 }
 
 @media(max-width: 500px)
